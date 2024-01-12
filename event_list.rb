@@ -11,7 +11,7 @@ class EventList
     if @list.empty?
       puts "Event list is empty."
     else
-      @list.each do |event, index|
+      @list.each_with_index do |event, index|
         index_num = index.to_i + 1
         puts "\n"
         puts "Event ##{index_num}: "

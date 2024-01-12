@@ -1,5 +1,9 @@
 # ruby-cli-template
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
+This app lets you create a list of music events along with its details.
 
-- Ruby version: `3.2.1`
+How to use:
+
+1. Enter `ruby app.rb` to start the app
+2. The app will start with list of commands you can use
+3. Enter `help` to print out instructions again
