@@ -1,6 +1,6 @@
 require_relative "event"
 
-Class EventList
+class EventList
   attr_accessor :list
   
   def initialize()
@@ -12,22 +12,24 @@ Class EventList
       puts "Event list is empty."
     else
       @list.each do |event, index|
-        index += 1
-        puts "Event ##{index}: "
+        index_num = index.to_i + 1
+        puts "\n"
+        puts "Event ##{index_num}: "
         puts "Artist: #{event.artist_name}"
         puts "Venue: #{event.venue}"
-        puts "Time: #{event.event_time}"
-        puts "Price: #{event.price}"
-        puts "/n"
+        puts "Time: #{event.time}"
+        puts "Price: $#{event.price}"
+        puts "\n"
+      end
     end
   end
 
   def add(event)
-    @list << Event.new(event)
+    @list << event
   end
 
   def remove(index)
     @list.delete_at(index - 1)
   end
-def
+
 end

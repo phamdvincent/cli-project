@@ -1,7 +1,7 @@
 require_relative "event_list"
 require_relative "event"
 
-Class Session
+class Session
 
   def initialize()
     @event_list = EventList.new
@@ -13,13 +13,13 @@ Class Session
     puts "2. Add an event"
     puts "3. Remove an event"
     puts "4. Exit program"
-    puts "/n"
+    puts "\n"
     puts "Type 'help' to show instructions."
   end
 
   def welcome
     puts "Welcome to the Musical Event Planner!"
-    puts "/n"
+    puts "\n"
     self.show_instructions
   end
 
@@ -70,7 +70,7 @@ Class Session
     self.welcome
     loop do
       command = self.get_input
-      if command = "4"
+      if command == "4"
         puts "Thank you for using Musical Event Planner!"
         break
       else
@@ -78,5 +78,4 @@ Class Session
       end
     end
   end
-
 end
